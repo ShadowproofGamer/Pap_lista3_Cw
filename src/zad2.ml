@@ -1,6 +1,15 @@
 let curry3 f x y z = f (x, (y,z));;
 let uncurry3 f (x, (y, z)) = f x y z;;
 
+let curry3_nl = fun f -> fun x -> fun y -> fun z -> f (x, (y,z));;
+let uncurry3 = fun f -> fun (x, (y, z)) -> f x y z;;
+
+
+
+
+
+
+
 let plus3 x y z = x+y+z;;
 let minus3 k = fst(k)-fst(snd(k))-snd(snd(k));;
 
