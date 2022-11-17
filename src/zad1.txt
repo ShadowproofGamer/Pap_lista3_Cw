@@ -1,0 +1,9 @@
+let f1 x = x 2 '2'
+    x =  int->int->'a
+    f = (int->int->'a) - > 'a
+
+let f2 x y z = x ( y ^ z );;
+    y = string
+    z = string
+    x = string -> 'a
+    f2 = (string - > 'a) -> string -> string -> 'a

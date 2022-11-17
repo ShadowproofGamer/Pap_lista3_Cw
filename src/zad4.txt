@@ -1,13 +1,13 @@
 let rec quicksort = function
 [] -> []
 | [x] -> [x]
-| xs -> let small = List.filter (fun y -> y < List.hd xs ) xs
+| xs -> let small = List.filter (fun y -> y < List.hd xs ) xs     <- nieskończona pętla jeśli (List.hd xs) jest najmniejszym elementem
 and large = List.filter (fun y -> y >= List.hd xs ) xs
 in quicksort small @ quicksort large;;
 
 let rec quicksort' = function
 [] -> []
-| x::xs -> let small = List.filter (fun y -> y < x ) xs
+| x::xs -> let small = List.filter (fun y -> y < x ) xs         <- brak case'a dla równego x (usuwa duplikaty)
 and large = List.filter (fun y -> y > x ) xs
            in quicksort' small @ (x :: quicksort' large);;
 
